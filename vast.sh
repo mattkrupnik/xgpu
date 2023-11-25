@@ -20,15 +20,15 @@ echo "STEP 4 of 10: Installed cMake"
 sudo apt -y install python3-pip > /dev/null 2>&1
 echo "STEP 5 of 10: Installed Python"
 
-git clone https://github.com/shanhaicoder/XENGPUMiner.git > /dev/null 2>&1
+sudo git clone https://github.com/shanhaicoder/XENGPUMiner.git > /dev/null 2>&1
 echo "STEP 6 of 10: Cloned https://github.com/shanhaicoder/XENGPUMiner.git"
 
 cd XENGPUMiner
-chmod +x build.sh > /dev/null 2>&1
-./build.sh > /dev/null 2>&1
+sudo chmod +x build.sh > /dev/null 2>&1
+sudo ./build.sh > /dev/null 2>&1
 echo "STEP 7 of 10: Permissions set!"
 
-sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0xd9cFaDD48471c26ef2dCA79Fd020e001Cf7CafB0/g' config.conf > /dev/null 2>&1
+sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0xd9cFaDD48471c26ef2dCA79Fd020e001Cf7CafB0/g' config.conf > /dev/null 2>&1
 echo "STEP 8 of 10: Replaced ETH address"
 
 sudo pip install -U -r requirements.txt > /dev/null 2>&1
